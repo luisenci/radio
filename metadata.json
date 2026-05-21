@@ -1,0 +1,6 @@
+{
+  "name": "Live Stream Transition",
+  "description": "A tool to create and preview professional image fade-to-blur transitions for live streaming overlays.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

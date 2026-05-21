@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Stream Transition</title>
+    <script>
+      // Prevent some libraries from crashing when trying to polyfill fetch
+      // if it's already defined as a read-only property.
+      (function() {
+        try {
+          var desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+          if (desc && !desc.writable && !desc.set && desc.configurable) {
+             // If it's a getter-only but configurable, we might be able to make it writable
+             // or just leave it alone. The error happens when code does window.fetch = ...
+             // We can't easily fix "window.fetch =" if it's truly read-only, 
+             // but some polyfills check if it exists first.
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
